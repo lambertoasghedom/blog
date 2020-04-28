@@ -1,66 +1,55 @@
-import Head from 'next/head'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from 'next/head';
+import Link from 'next/Link';
 
-const name = 'Lamberto'
-export const siteTitle = 'Next.js Sample Website'
-
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
-        <meta
-          property="og:image"
-          content={`https://og-image.now.sh/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <img
-              src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
+    <>
+      <header className="header">
+        <nav>
           <Link href="/">
-            <a>← Back to home</a>
+            <a>Lamberto</a>
           </Link>
-        </div>
-      )}
-    </div>
-  )
+          <ul>
+            <li>
+              <Link href="/">
+                <a>Writings</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                <a>About</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                <a>Newsletter</a>
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      {children}
+      <style jsx>{`
+        .header {
+          border-bottom: 1px solid #d8d8d8
+        }
+        nav {
+          max-width: 1040px;
+          margin: auto;
+          padding: 1rem 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        ul {
+          display: flex;
+          list-style: none;
+        }
+        a {
+          padding: 5px 10px;
+          text-decoration: none;
+        }
+      `}</style>
+    </>
+  ) 
 }
