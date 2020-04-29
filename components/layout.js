@@ -7,22 +7,22 @@ export default function Layout({ children }) {
       <header className="header">
         <nav>
           <Link href="/">
-            <a>Lamberto</a>
+            <a style={{ color: 'black'  }}>Lamberto</a>
           </Link>
           <ul>
             <li>
-              <Link href="/">
-                <a>Writings</a>
+              <Link href="/writings">
+                <a style={{ color: 'black'  }}>Writings</a>
               </Link>
             </li>
             <li>
               <Link href="/about">
-                <a>About</a>
+                <a style={{ color: 'black'  }}>About</a>
               </Link>
             </li>
             <li>
               <Link href="/">
-                <a>Newsletter</a>
+                <a style={{ color: 'black'  }}>Newsletter</a>
               </Link>
             </li>
           </ul>
@@ -35,7 +35,6 @@ export default function Layout({ children }) {
         }
         nav {
           max-width: 800px;
-          // margin: auto;
           padding: 3rem 0;
           display: flex;
           align-items: center;
