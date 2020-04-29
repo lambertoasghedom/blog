@@ -1,3 +1,5 @@
+# hello
+
 It's never been a better time to learn React. If you're just getting started, you might have heard about these three options:
 
 Next.js
@@ -33,26 +35,6 @@ Gatsby
 The key difference between Next.js and Gatsby is that Gatsby doesn't use a server. While Gatsby's main use case is for static sites, it can also re-hydrate into a fully-functional React application. Many other Next.js vs. Gatsby comparisons miss the fact that Next.js can also be used as a static site generator.
 
 Gatsby comes bundled with GraphQL for data fetching. Here's a short example.
-
-import React from 'react';
-import {graphql} from 'gatsby';
-
-const HomePage = ({data}) => {
-    return <div>{data.site.siteMetadata.description}</div>;
-};
-
-export const query = graphql`
-    query HomePageQuery {
-        site {
-            siteMetadata {
-                description
-            }
-        }
-    }
-`;
-
-export default HomePage;
-You can use Gatsby without GraphQL if you absolutely must/want, but it's one of the key features it promotes.
 
 Pros
 

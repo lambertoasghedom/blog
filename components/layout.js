@@ -16,7 +16,7 @@ export default function Layout({ children }) {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/about">
                 <a>About</a>
               </Link>
             </li>
@@ -34,9 +34,9 @@ export default function Layout({ children }) {
           border-bottom: 1px solid #d8d8d8
         }
         nav {
-          max-width: 1040px;
-          margin: auto;
-          padding: 1rem 2rem;
+          max-width: 800px;
+          // margin: auto;
+          padding: 3rem 0;
           display: flex;
           align-items: center;
           justify-content: space-between;
