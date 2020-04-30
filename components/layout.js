@@ -21,7 +21,7 @@ export default function Layout({ children }) {
               </Link>
             </li>
             <li>
-              <Link href="/">
+              <Link href="/newsletter">
                 <a style={{ color: 'black'  }}>Newsletter</a>
               </Link>
             </li>
