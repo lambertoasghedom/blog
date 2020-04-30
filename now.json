@@ -1,6 +1,6 @@
 {
    "env": {
-      "mailchimp_list_id": "@mailchimp-list-id",
-      "mailchimp_api_key": "@mailchimp-api-key"
+      "MAILCHIMP_LIST_ID": "@mailchimp-list-id",
+      "MAILCHIMP_API_KEY": "@mailchimp-api-key"
    }
 }

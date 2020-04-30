@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch';
+import fetch from 'isomorphic-unfetch';
 
 export default async (req, res) => {
    //** Destructure the email address the request body */ 
@@ -18,7 +18,7 @@ export default async (req, res) => {
          email_address: email,
          status: 'subscribed'
       };
-      /** send a POST to Mailchimp 📦 -->🐒  */
+      /** send a POST to Mailchimp 📦=>🐒  */
       const response = await fetch(
          `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${LIST_ID}/members`,
           {
