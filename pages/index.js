@@ -5,6 +5,7 @@ export default function Index() {
     <Layout>
       <main>
         <h1>Hey, I'm Lamberto</h1>
+        <p>the value of mailchips api key is {process.env.MAILCHIMP_API_KEY}</p>
       </main>
     </Layout>
   )

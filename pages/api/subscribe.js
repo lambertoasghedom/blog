@@ -29,7 +29,7 @@ export default async (req, res) => {
             },
             method: 'POST'
          }
-      ); 
+      );
       /** snatch any errors from Mailchimp and return a bettor error message */
       if (response.status <= 400) {
          return res.status(400).json({ error: `There was an error subscribing to the newsletter. Shoot me an email at [asghedom.lamberto@gmail.com] and I'll add you to the list.` });
