@@ -10,10 +10,9 @@ export default async (req, res) => {
    }
 
    try {
-      const LIST_ID = process.env.mailchimp_list_id;
-      const API_KEY = process.env.mailchimp_api_key;
-      console.log(API_KEY)
-      const DATACENTER = API_KEY.split('-')[1]; 
+      const API_KEY = process.env.MAILCHIMP_API_KEY;
+      const LIST_ID = process.env.MAILCHIMP_LIST_ID;
+      const DATACENTER = process.env.API_KEY.split('-')[1]; 
 
       const data = {
          email_address: email,

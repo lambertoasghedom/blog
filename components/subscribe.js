@@ -46,5 +46,5 @@ function Subscribe() {
    );
 };
 
-export default Subscribe;
+export default Subscribe
 
