@@ -30,9 +30,6 @@ export default function Layout({ children }) {
       </header>
       {children}
       <style jsx>{`
-        .header {
-          border-bottom: 1px solid #d8d8d8
-        }
         nav {
           max-width: 800px;
           padding: 3rem 0;
