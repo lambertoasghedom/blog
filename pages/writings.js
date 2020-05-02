@@ -1,24 +1,36 @@
+import Link from 'next/link';
 import Layout from '../components/layout';
-import fetch from 'isomorphic-unfetch';
 import { posts } from '../posts';
 
-function Writings({ posts }) {
+const Writings = ({ posts, date }) => (
    /** render posts */
    <Layout>
       <h1>Writings</h1>
-      {console.log(posts)}
+      <ul>
+         {posts.map(post => (
+            <>
+               <li key={post.id}>
+                  <span>{post.date}</span>
+                  <Link href={post.url}>
+                     {post.title}
+                  </Link>
+               </li>
+            </>
+         ))}
+      </ul>
    </Layout>
-}
+);
 
 export async function getStaticProps() {
-   const res = await fetch(posts);
-   const posts  = res.json();
-    return {
-       props: {
-          posts,
-       }
-    }
-}
+   return {
+      props: {
+         posts: posts.map(post => ({
+            ...post,
+            url: `${new Date(post.date).getFullYear()}/${post.id}` // 👈🏾might change this later 🤔
+         }))
+      },
+   };
+};
 
 export default Writings;
 
