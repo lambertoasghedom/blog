@@ -5,19 +5,38 @@ import { posts } from '../posts';
 const Writings = ({ posts, date }) => (
    /** render posts */
    <Layout>
-      <h1>Writings</h1>
       <ul>
          {posts.map(post => (
             <>
                <li key={post.id}>
                   <span>{post.date}</span>
                   <Link href={post.url}>
-                     {post.title}
+                     <a>{post.title}</a>
                   </Link>
                </li>
             </>
          ))}
       </ul>
+         <style jsx>{`
+            ul {
+               list-style: none;
+               padding: 20px 0;
+               margin: 0;
+            }
+            li {
+               padding: 10px 15px;
+            }
+            span {
+               padding-right: 10px;
+               width: 160px;
+               text-align: right;
+               display: inline-block;
+            }
+            a {
+               padding: 10px 15px;
+               font-weight: bold;
+            }
+         `}</style>
    </Layout>
 );
 
