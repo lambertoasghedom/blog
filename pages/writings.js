@@ -2,8 +2,10 @@ import Link from 'next/link';
 import Layout from '../components/layout';
 import { posts } from '../posts';
 
-const Writings = ({ posts, date }) => (
-   /** render posts */
+
+const Writings = ({ posts, date }) => {
+   return (
+      /** render posts */
    <Layout>
       <ul>
          {posts.map(post => (
@@ -35,8 +37,9 @@ const Writings = ({ posts, date }) => (
                font-weight: bold;
             }
          `}</style>
-   </Layout>
-);
+      </Layout>
+   );
+};
 
 export async function getStaticProps() {
    return {
