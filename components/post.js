@@ -1,12 +1,12 @@
 import React from 'react';
-import { MDXPROVIDER } from '@mdx-js/tag';
+import { MDXProvider } from '@mdx-js/tag';
 import Layout from './layout';
 
 const Post = ({ children }) => (
    <Layout>
-      <MDXPROVIDER>
+      <MDXProvider>
          {children}
-      </MDXPROVIDER>
+      </MDXProvider>
    </Layout>
 );
 

@@ -2,20 +2,17 @@ import Link from 'next/link';
 import Layout from '../components/layout';
 import { posts } from '../posts';
 
-console.log(posts.url)
 const Writings = ({ posts, date }) => (
    /** render posts */
    <Layout>
       <ul>
          {posts.map(post => (
-            <>
-               <li key={post.id}>
-                  <span>{post.date}</span>
-                  <Link href={post.url}>
-                     <a>{post.title}</a>
-                  </Link>
-               </li>
-            </>
+            <li key={post.id}>
+               <span>{post.date}</span>
+               <Link href={post.url}>
+                  <a>{post.title}</a>
+               </Link>
+            </li>
          ))}
       </ul>
          <style jsx>{`
@@ -46,13 +43,10 @@ export async function getStaticProps() {
       props: {
          posts: posts.map(post => ({
             ...post,
-            url: `${new Date(post.date).getFullYear()}/${post.id}` 
+            url: `${new Date(post.date).getFullYear()}/${post.id}`
          }))
       },
    };
 };
 
 export default Writings;
-
-
-

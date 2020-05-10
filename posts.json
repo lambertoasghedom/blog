@@ -1,14 +1,14 @@
 {
-   "posts": [
-     {
-       "id": "useRef-pretty-clutch",
-       "date": "April 26, 2020",
-       "title": "useRef pretty clutch"
-     },
-     {
-       "id": "axe-core",
-       "date": "May 5th, 2020",
-       "title": "AXE CORE"
-     }
-   ]
- }
+  "posts": [
+    {
+      "id": "useRef-pretty-clutch",
+      "date": "April 26, 2020",
+      "title": "useRef pretty clutch"
+    },
+    {
+      "id": "axe-core",
+      "date": "May 5th, 2020",
+      "title": "AXE CORE"
+    }
+  ]
+}
