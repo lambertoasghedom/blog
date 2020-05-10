@@ -1,4 +1,5 @@
 import Layout from '../components/layout';
+import { Avatar, AvatarBadge, Stack } from "@chakra-ui/core";    
 
 export default function Index() {
   return (

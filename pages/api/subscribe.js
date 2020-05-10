@@ -30,7 +30,8 @@ export default async (req, res) => {
          }
       );
 
-      if (response.status <= 400) {
+      if (response.status >= 400) {
+         console.log(response)
          return res.status(400).json({ 
             error: `There was an error subscribing to the newsletter. Shoot me an email at [asghedom.lamberto@gmail.com] and I'll add you to the list.` 
          });

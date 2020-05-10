@@ -25,7 +25,7 @@ function Subscribe() {
          setMessage(error);
          return;
       }
-      inputEl.current,value = '';
+      inputEl.current.value = '';
       setMessage('Success! 🎉 You are now subscribed to the newsletter.');
    };
    return (

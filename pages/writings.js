@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Layout from '../components/layout';
 import { posts } from '../posts';
 
+console.log(posts.url)
 const Writings = ({ posts, date }) => (
    /** render posts */
    <Layout>
@@ -45,7 +46,7 @@ export async function getStaticProps() {
       props: {
          posts: posts.map(post => ({
             ...post,
-            url: `${new Date(post.date).getFullYear()}/${post.id}` // 👈🏾might change this later 🤔
+            url: `${new Date(post.date).getFullYear()}/${post.id}` 
          }))
       },
    };
