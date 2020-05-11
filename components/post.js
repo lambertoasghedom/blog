@@ -1,12 +1,15 @@
 import React from 'react';
-import { MDXProvider } from '@mdx-js/tag';
+import { Avatar, AvatarBadge, Stack } from "@chakra-ui/core";    
+import avatar from '../img/avatar.jpeg';
+
 import Layout from './layout';
 
 const Post = ({ children }) => (
    <Layout>
-      <MDXProvider>
-         {children}
-      </MDXProvider>
+      <Stack isInline>
+         <Avatar name="Lamberto Asghedom" src={avatar} />
+      </Stack>
+      {children}
    </Layout>
 );
 

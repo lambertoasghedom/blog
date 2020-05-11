@@ -1,3 +1,7 @@
 import Post from '../../components/post';
 
-export default ({ children }) => <Post>{children}</Post>
+export default withViews = () => (
+   <Post>
+      lajsd
+   </Post>
+)
