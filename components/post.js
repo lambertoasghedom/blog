@@ -9,6 +9,11 @@ export default({ children }) => (
       <main>
          <article>{children}</article>
       </main>
+      <style jsx>{`
+         main {
+            padding: 0 10px;
+         }
+      `}</style>
    </Layout>
 )
 

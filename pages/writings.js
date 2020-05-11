@@ -4,6 +4,7 @@ import { posts } from '../posts';
 
 
 const Writings = ({ posts, date }) => {
+   console.log(posts)
    return (
       /** render posts */
    <Layout>
