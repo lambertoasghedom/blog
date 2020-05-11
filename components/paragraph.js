@@ -1,4 +1,4 @@
-export default ({ chidren }) => (
+export default ({ children }) => (
    <p>
       {children}
       <style jsx>{`

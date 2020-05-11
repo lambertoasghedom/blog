@@ -1,5 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import React from 'react';
+import { Avatar, AvatarBadge, Stack } from "@chakra-ui/core";    
+import avatar from '../img/avatar.jpeg';
 
 export default function Layout({ children }) {
   return (

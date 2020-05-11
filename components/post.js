@@ -4,13 +4,21 @@ import avatar from '../img/avatar.jpeg';
 
 import Layout from './layout';
 
-const Post = ({ children }) => (
+export default({ children }) => (
    <Layout>
-      <Stack isInline>
-         <Avatar name="Lamberto Asghedom" src={avatar} />
-      </Stack>
-      {children}
+      <main>
+         <article>{children}</article>
+      </main>
    </Layout>
-);
+)
 
-export default Post;
+// const Post = () => (
+//    <Layout>
+//       <h1>useRef</h1>
+//       <Stack isInline>
+//          <Avatar size="sm" name="Lamberto Asghedom" src={avatar} />
+//       </Stack>
+//    </Layout>
+// );
+
+// export default Post;
