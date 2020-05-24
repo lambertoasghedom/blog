@@ -20,9 +20,9 @@ export default ({ children }) => (
 // const Post = () => (
 //    <Layout>
 //       <h1>useRef</h1>
-//       <Stack isInline>
-//          <Avatar size="sm" name="Lamberto Asghedom" src={avatar} />
-//       </Stack>
+      // <Stack isInline>
+      //    <Avatar size="sm" name="Lamberto Asghedom" src={avatar} />
+      // </Stack>
 //    </Layout>
 // );
 
