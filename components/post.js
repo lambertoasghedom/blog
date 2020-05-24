@@ -4,7 +4,7 @@ import avatar from '../img/avatar.jpeg';
 
 import Layout from './layout';
 
-export default({ children }) => (
+export default ({ children }) => (
    <Layout>
       <main>
          <article>{children}</article>
