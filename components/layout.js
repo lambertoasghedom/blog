@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
-import { Avatar, AvatarBadge, Stack } from "@chakra-ui/core";    
-import avatar from '../img/avatar.jpeg';
 
 export default function Layout({ children }) {
   return (
@@ -28,9 +26,11 @@ export default function Layout({ children }) {
       </header>
       {children}
       <style jsx>{`
+        header {
+          padding: 10px 0;
+        }
         nav {
           max-width: 800px;
-          padding: 3rem 0;
           display: flex;
           align-items: center;
           justify-content: space-between;
