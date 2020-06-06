@@ -23,11 +23,6 @@ export default function Layout({ children }) {
                 <a style={{ color: 'black'  }}>About</a>
               </Link>
             </li>
-            <li>
-              <Link href="/newsletter">
-                <a style={{ color: 'black'  }}>Newsletter</a>
-              </Link>
-            </li>
           </ul>
         </nav>
       </header>
